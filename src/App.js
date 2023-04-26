@@ -62,8 +62,10 @@ class App extends Component {
       );
     });
     const { ab_indicators } = this.state;
-    const abSliced = ab_indicators;
-    const abRows = abSliced.map((row, index) => {
+    const abEmployment = ab_indicators.filter(item => {
+      return item.titleEn.includes("mploy");
+    });
+    const abRows = abEmployment.map((row, index) => {
       return (
         <tr key={index}>
           <td>{row.titleEn}</td>
@@ -83,8 +85,10 @@ class App extends Component {
       );
     });
     const { ca_indicators } = this.state;
-    const caSliced = ca_indicators;
-    const caRows = caSliced.map((row, index) => {
+    const caEmployment = ca_indicators.filter(item => {
+      return item.titleEn.includes("Employ");
+    });
+    const caRows = caEmployment.map((row, index) => {
       return (
         <tr key={index}>
           <td>{row.titleEn}</td>
@@ -104,8 +108,10 @@ class App extends Component {
       );
     });
     const { on_indicators } = this.state;
-    const onSliced = on_indicators;
-    const onRows = onSliced.map((row, index) => {
+    const onEmployment = on_indicators.filter(item => {
+      return item.titleEn.includes("Employ");
+    });
+    const onRows = onEmployment.map((row, index) => {
       return (
         <tr key={index}>
           <td>{row.titleEn}</td>
@@ -125,8 +131,10 @@ class App extends Component {
       );
     });
     const { bc_indicators } = this.state;
-    const bcSliced = bc_indicators;
-    const bcRows = bcSliced.map((row, index) => {
+    const bcEmployment = bc_indicators.filter(item => {
+      return item.titleEn.includes("Employ");
+    });
+    const bcRows = bcEmployment.map((row, index) => {
       return (
         <tr key={index}>
           <td>{row.titleEn}</td>
@@ -164,9 +172,9 @@ class App extends Component {
           <table>
             <thead>
               <tr>
-                <th>CA</th>
+                <th>CA-Indicator</th>
                 <th></th>
-                <th>Indicator</th>
+                <th>Value</th>
                 <th></th>
                 <th>growth</th>
                 <th></th>
@@ -178,9 +186,9 @@ class App extends Component {
           <table>
             <thead>
               <tr>
-                <th>AB</th>
+                <th>AB-Indicator</th>
                 <th></th>
-                <th>Indicator</th>
+                <th>Value</th>
                 <th></th>
                 <th>growth</th>
                 <th></th>
@@ -192,9 +200,9 @@ class App extends Component {
           <table>
             <thead>
               <tr>
-                <th>ON</th>
+                <th>ON-Indicator</th>
                 <th></th>
-                <th>Indicator</th>
+                <th>Value</th>
                 <th></th>
                 <th>growth</th>
                 <th></th>
@@ -206,9 +214,9 @@ class App extends Component {
           <table>
             <thead>
               <tr>
-                <th>BC</th>
+                <th>BC-Indicator</th>
                 <th></th>
-                <th>Indicator</th>
+                <th>Value</th>
                 <th></th>
                 <th>growth</th>
                 <th></th>
