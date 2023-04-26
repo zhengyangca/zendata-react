@@ -62,7 +62,7 @@ class App extends Component {
       );
     });
     const { ab_indicators } = this.state;
-    const abSliced = ab_indicators.slice(0, 3);
+    const abSliced = ab_indicators;
     const abRows = abSliced.map((row, index) => {
       return (
         <tr key={index}>
@@ -83,7 +83,7 @@ class App extends Component {
       );
     });
     const { ca_indicators } = this.state;
-    const caSliced = ca_indicators.slice(1, 4);
+    const caSliced = ca_indicators;
     const caRows = caSliced.map((row, index) => {
       return (
         <tr key={index}>
@@ -104,7 +104,7 @@ class App extends Component {
       );
     });
     const { on_indicators } = this.state;
-    const onSliced = on_indicators.slice(0, 3);
+    const onSliced = on_indicators;
     const onRows = onSliced.map((row, index) => {
       return (
         <tr key={index}>
@@ -125,7 +125,7 @@ class App extends Component {
       );
     });
     const { bc_indicators } = this.state;
-    const bcSliced = bc_indicators.slice(0, 3);
+    const bcSliced = bc_indicators;
     const bcRows = bcSliced.map((row, index) => {
       return (
         <tr key={index}>
