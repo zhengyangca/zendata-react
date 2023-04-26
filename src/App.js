@@ -62,7 +62,7 @@ class App extends Component {
       );
     });
     const { ab_indicators } = this.state;
-    const abSliced = ab_indicators.slice(0, 2);
+    const abSliced = ab_indicators.slice(0, 3);
     const abRows = abSliced.map((row, index) => {
       return (
         <tr key={index}>
@@ -71,11 +71,19 @@ class App extends Component {
             <div style={{ padding: "10px" }} />
           </td>
           <td>{row.valueEn}</td>
+          <td>
+            <div style={{ padding: "10px" }} />
+          </td>
+          <td>{row.growth_rateEn}</td>
+          <td>
+            <div style={{ padding: "10px" }} />
+          </td>
+          <td>{row.refperEn}</td>
         </tr>
       );
     });
     const { ca_indicators } = this.state;
-    const caSliced = ca_indicators.slice(0, 2);
+    const caSliced = ca_indicators.slice(1, 4);
     const caRows = caSliced.map((row, index) => {
       return (
         <tr key={index}>
@@ -84,11 +92,19 @@ class App extends Component {
             <div style={{ padding: "10px" }} />
           </td>
           <td>{row.valueEn}</td>
+          <td>
+            <div style={{ padding: "10px" }} />
+          </td>
+          <td>{row.growth_rateEn}</td>
+          <td>
+            <div style={{ padding: "10px" }} />
+          </td>
+          <td>{row.refperEn}</td>
         </tr>
       );
     });
     const { on_indicators } = this.state;
-    const onSliced = on_indicators.slice(0, 2);
+    const onSliced = on_indicators.slice(0, 3);
     const onRows = onSliced.map((row, index) => {
       return (
         <tr key={index}>
@@ -97,11 +113,19 @@ class App extends Component {
             <div style={{ padding: "10px" }} />
           </td>
           <td>{row.valueEn}</td>
+          <td>
+            <div style={{ padding: "10px" }} />
+          </td>
+          <td>{row.growth_rateEn}</td>
+          <td>
+            <div style={{ padding: "10px" }} />
+          </td>
+          <td>{row.refperEn}</td>
         </tr>
       );
     });
     const { bc_indicators } = this.state;
-    const bcSliced = bc_indicators.slice(0, 2);
+    const bcSliced = bc_indicators.slice(0, 3);
     const bcRows = bcSliced.map((row, index) => {
       return (
         <tr key={index}>
@@ -110,6 +134,14 @@ class App extends Component {
             <div style={{ padding: "10px" }} />
           </td>
           <td>{row.valueEn}</td>
+          <td>
+            <div style={{ padding: "10px" }} />
+          </td>
+          <td>{row.growth_rateEn}</td>
+          <td>
+            <div style={{ padding: "10px" }} />
+          </td>
+          <td>{row.refperEn}</td>
         </tr>
       );
     });
@@ -128,13 +160,17 @@ class App extends Component {
             <tbody>{rows}</tbody>
           </table>
         </div>
-        <div style={{ flex: 1, backgroundColor: "grey" }}>
+        <div style={{ flex: 1, backgroundColor: "yellow" }}>
           <table>
             <thead>
               <tr>
                 <th>CA</th>
                 <th></th>
                 <th>Indicator</th>
+                <th></th>
+                <th>growth</th>
+                <th></th>
+                <th>refper</th>
               </tr>
             </thead>
             <tbody>{caRows}</tbody>
@@ -145,6 +181,10 @@ class App extends Component {
                 <th>AB</th>
                 <th></th>
                 <th>Indicator</th>
+                <th></th>
+                <th>growth</th>
+                <th></th>
+                <th>refper</th>
               </tr>
             </thead>
             <tbody>{abRows}</tbody>
@@ -155,6 +195,10 @@ class App extends Component {
                 <th>ON</th>
                 <th></th>
                 <th>Indicator</th>
+                <th></th>
+                <th>growth</th>
+                <th></th>
+                <th>refper</th>
               </tr>
             </thead>
             <tbody>{onRows}</tbody>
@@ -165,6 +209,10 @@ class App extends Component {
                 <th>BC</th>
                 <th></th>
                 <th>Indicator</th>
+                <th></th>
+                <th>growth</th>
+                <th></th>
+                <th>refper</th>
               </tr>
             </thead>
             <tbody>{bcRows}</tbody>
